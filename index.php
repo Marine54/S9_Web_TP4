@@ -10,6 +10,9 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
+        <!-- Un exemple d'onglet -->
+        <a href="vache/vache.html" target="_blank">Course de vache</a>
+        
         <?php
         // put your code here
         ?>

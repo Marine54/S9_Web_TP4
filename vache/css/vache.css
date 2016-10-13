@@ -1,0 +1,39 @@
+aside {
+  float: left;
+  margin: 0 1.5%;
+  width: 30%;
+}
+
+img {
+	width: 50px;
+	height: 50px;
+	}
+footer {
+	position: absolute;
+	bottom: 0;
+}
+
+#svg2 {
+	width: 500px;
+	height: 300px;
+}
+
+#countdown {
+    margin-left: 50px;
+    font-size: 32px;
+    color: red;
+}
+
+/* Couleur des vaches */
+#span_pimprenelle {
+	color: red;
+}
+#span_margerite {
+	color: #FFAD00;
+} 
+#span_paquerette {
+	color: blue;
+}
+#span_paulette {
+	color: saddlebrown;
+}
