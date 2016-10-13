@@ -1,0 +1,35 @@
+
+/* 
+    Created on : 8 oct. 2016, 16:00:47
+    Author     : Marine
+*/
+name {
+    font-size: 28px;
+    color: red;
+    font-weight: bold;
+}
+
+streamable, listeners {
+    display: none;
+}
+
+.songName {
+    color: red;
+}
+.artistName {
+    color: blue;
+}
+.inline {
+    display: inline-block;
+}
+.trackDiv {
+    background-color: lightgray;
+    width: 60%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 30px 10px 30px;
+}
+.info {
+    margin-left: 25px;
+}
+
