@@ -1,0 +1,14 @@
+
+/* 
+    Created on : 13 oct. 2016, 12:28:34
+    Author     : Marine
+*/
+.tab {
+    display: inline-block;
+    width: 282px;
+    height: 179px;
+    background-image: url("images/vache.jpg");
+}
+.tab a {
+    color: white;
+}

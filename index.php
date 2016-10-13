@@ -7,14 +7,13 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>ANGELONI TP4</title>
+        <link rel="stylesheet" href="general.css" />
     </head>
     <body>
-        <!-- Un exemple d'onglet -->
-        <a href="vache/vache.html" target="_blank">Course de vache</a>
-        
         <?php
-        // put your code here
+            // put your code here
+            include 'menu.html';
         ?>
     </body>
 </html>

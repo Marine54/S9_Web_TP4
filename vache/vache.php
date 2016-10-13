@@ -4,13 +4,17 @@
         <meta charset="utf-8">
         <title>Cow race</title>
         <link rel="stylesheet" href="css/vache.css">
+        <link rel="stylesheet" href="../general.css">
 
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-        <script type="text/javascript" src="js/vache.js"></script>        
+        
     </head>
 
 
     <body>
+        <?php
+            include_once '../menu.html';
+        ?>
         <header>
             <h1>Cow Race</h1>
 
@@ -174,6 +178,8 @@
     <footer>
         ANGELONI-2016/2017
     </footer>
+    
+    <script type="text/javascript" src="js/vache.js"></script>        
 </body>
 
 </html>

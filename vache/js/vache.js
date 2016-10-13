@@ -111,3 +111,6 @@ function faireBougerUneVache(id, distance) {
     }
     
 }
+
+var tab = document.getElementById("tabVache");
+tab.style.backgroundImage ="url('/S9_Web_TP4/images/vache_active.jpg')";

@@ -2,11 +2,11 @@ var limit = 5;
 
 // Méthode appelée dès que l'utilisateur modifie sa saisie.
 function retrieve() {
-    loadXMLDoc();
+    loadJSONDoc();
 }
 
 
-function loadXMLDoc() {
+function loadJSONDoc() {
     // Create XMLHttpRequest object (Check browser) 
     var xmlhttp;
     if (window.XMLHttpRequest) {
@@ -26,35 +26,34 @@ function loadXMLDoc() {
 
     // Initialize request with last.fm API
     var saisie = document.getElementById("bsearch").value;
-    var url = "http://ws.audioscrobbler.com/2.0/?method=track.search&track=" + saisie + "&limit="+limit+"&api_key=e66c9c6929dce392c2e395ee08ab447f";
+    var url = "http://ws.audioscrobbler.com/2.0/?method=track.search&track=" + saisie + "&limit="+limit+"&api_key=e66c9c6929dce392c2e395ee08ab447f&format=json";
     xmlhttp.open("GET", url, true);
     // Send 
     xmlhttp.send();
 }
 
 // Affichage des musiques en fonction du XML reçu de l'API Last.Fm
-function showTracks(xml) {
-    var oParser = new DOMParser();
-    var xmldoc = oParser.parseFromString(xml, "text/xml");
+function showTracks(json) {
+    var jsondoc = JSON.parse(json);
 
-    var html = constructionHTML(xmldoc);
+    var html = constructionHTML(jsondoc);
    
     document.getElementById("results").innerHTML = html;
 }
 
-function constructionHTML(xmldoc) {
+function constructionHTML(jsondoc) {
     // Construction du HTML
-    var tracks = xmldoc.getElementsByTagName("track");
+    var tracks = jsondoc.results.trackmatches.track;
+    
     var html = "";
     for (i = 0; i < tracks.length; i++) {
         html += '<div class="trackDiv">';
         var track = tracks[i];
         //        console.log(track.childNodes);
 
-        var name = track.childNodes[0].childNodes[0].data;
-        var artist = track.childNodes[2].childNodes[0].data;
-        // 12 = small ; 14= medium
-        var image = track.childNodes[12].childNodes[0].data;
+        var name = track.name;
+        var artist = track.artist;
+        var image = track.image[1]["#text"];
 
         console.log(name);
         console.log(artist);
@@ -70,5 +69,3 @@ function constructionHTML(xmldoc) {
     return html;
 }
 
-var tab = document.getElementById("tabTacksXml");
-tab.style.backgroundImage ="url('/S9_Web_TP4/images/vache_active.jpg')";
