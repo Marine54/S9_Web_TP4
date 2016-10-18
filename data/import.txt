@@ -1,0 +1,1 @@
+C:\xampp\mysql\bin\mysql -u {username} -p {databasename} < file_name.sql
